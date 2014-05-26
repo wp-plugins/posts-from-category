@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: Post from Category
+ * Plugin Name: Post From Category
  * Version: 1.0.0
  * Plugin URI: #
  * Description: Plugin to display posts from specific category. 

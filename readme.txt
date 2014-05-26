@@ -1,4 +1,4 @@
-=== Post from Category ===
+=== Post From Category ===
 Contributors: maneshtimilsina 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EXCSPXTLFMAH4
 Tags: post from category, post listing, post list from category, post listing widget, plugin to list posts, list post from specific category
