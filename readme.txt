@@ -1,7 +1,7 @@
 === Posts From Category ===
 Contributors: maneshtimilsina 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NRXQAT8FRRG3S
-Tags: post from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list post from specific category, post, sidebar
+Tags: posts from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list posts from specific category, post, sidebar
 Version: 1.0.0
 Requires at least: 3.4.0
 Tested up to: 3.9.1
@@ -14,7 +14,21 @@ Plugin to list posts from specific category.
 
 == Description ==
 
-Plugin to list posts from specific category.
+Plugin to list posts from specific category. You can customize your listing as your requirement. 
+
+Following features are offered by plugin:
+
+* Title field for your listing
+* Select category from dropdown
+* Order posts by author, title, id, date, number of comments, menu order or random 
+* Order posts in Ascending or Descending order
+* Select number of posts to display
+* Exclude posts from listing
+* Change word lenght of excerpt
+* Enable/Disable featured image
+* Select size of featured image
+* Enable/Disable publish date
+* Enable/Disable read more link
 
 == Installation ==
 
