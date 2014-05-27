@@ -84,6 +84,9 @@ class PFCWidget extends WP_Widget {
 				while($p_query->have_posts()){
 
 					$p_query->the_post(); ?>
+
+					<div class="pfc-post">
+
 					<h2>
 						<a href="<?php the_permalink(); ?>" title="<?php _e('Go to '.get_the_title(), 'PFC') ?>"><?php the_title(); ?></a>
 					</h2>
@@ -111,8 +114,11 @@ class PFCWidget extends WP_Widget {
 
 					<?php
 					if( 1 == $read_more ){ ?>
-						<a href="<?php the_permalink(); ?>" title="<?php _e('Go to '.get_the_title(), 'PFC') ?>" class="read-more">Read More</a>
+						<a href="<?php the_permalink(); ?>" title="<?php _e('Go to', 'PFC').' '.get_the_title(); ?>" class="read-more">Read More</a>
 					<?php } ?>
+
+					</div>
+
 					<?php 
 
 				}

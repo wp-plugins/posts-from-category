@@ -1,7 +1,7 @@
 === Posts From Category ===
 Contributors: maneshtimilsina 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NRXQAT8FRRG3S
-Tags: post from category, post listing, post list from category, post listing widget, plugin to list posts, list post from specific category
+Tags: post from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list post from specific category, post
 Version: 1.0.0
 Requires at least: 3.4.0
 Tested up to: 3.9.1
