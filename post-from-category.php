@@ -88,7 +88,7 @@ class PFCWidget extends WP_Widget {
 					<div class="pfc-post">
 
 					<h2>
-						<a href="<?php the_permalink(); ?>" title="<?php _e('Go to '.get_the_title(), 'PFC') ?>"><?php the_title(); ?></a>
+						<a href="<?php the_permalink(); ?>" title="<?php _e('Go to', 'PFC').' '.get_the_title(); ?>"><?php the_title(); ?></a>
 					</h2>
 					<?php if( 1 == $date ){  ?>
 						<span><?php echo get_the_date(); ?></span>
@@ -100,7 +100,7 @@ class PFCWidget extends WP_Widget {
 
 						if(has_post_thumbnail()) { ?>
 
-							<a href="<?php the_permalink(); ?>" title="<?php _e('Go to '.get_the_title(), 'PFC') ?>">
+							<a href="<?php the_permalink(); ?>" title="<?php _e('Go to', 'PFC').' '.get_the_title(); ?>">
 							<?php the_post_thumbnail( $post_thumbs ); ?>
 							</a>
 							<div style="clear:both;"></div>
@@ -168,17 +168,17 @@ class PFCWidget extends WP_Widget {
 		# Output the options?>
 		<p style="text-align:left;">
 		<label for="<?php echo $this->get_field_name('title'); ?>">
-		<?php _e('Title:'); ?></label>
+		<?php _e('Title:', 'PFC'); ?></label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 		
 		</p>
 		
 		<p style="text-align:left;">
 			<label for="<?php echo $this->get_field_id('post_cat'); ?>">
-			<?php _e('Select Category:'); ?>
+			<?php _e('Select Category:', 'PFC'); ?>
 			</label>
 			<select style="width: 100%;" id="<?php echo $this->get_field_id('post_cat'); ?>" name="<?php echo $this->get_field_name('post_cat'); ?>">
-				<option value="0"><?php _e( '&mdash; Select &mdash;' ) ?></option>
+				<option value="0"><?php _e( '&mdash; Select &mdash;', 'PFC' ) ?></option>
 		<?php
 			$cats = get_categories( array( 'hide_empty' => 0 ) );
 			foreach ( $cats as $cat ) {
@@ -192,10 +192,10 @@ class PFCWidget extends WP_Widget {
 
 		<p style="text-align:left;">
 			<label for="<?php echo $this->get_field_id('post_order_by'); ?>">
-			<?php _e('Order By:'); ?>
+			<?php _e('Order By:', 'PFC'); ?>
 			</label>
 			<select style="width: 100%;" id="<?php echo $this->get_field_id('post_order_by'); ?>" name="<?php echo $this->get_field_name('post_order_by'); ?>">
-				<option value="0"><?php _e( '&mdash; Select &mdash;' ) ?></option>
+				<option value="0"><?php _e( '&mdash; Select &mdash;', 'PFC' ) ?></option>
 		<?php
 			$orders = array( 
 							'author' => 'Author',
@@ -217,10 +217,10 @@ class PFCWidget extends WP_Widget {
 
 		<p style="text-align:left;">
 			<label for="<?php echo $this->get_field_id('post_order'); ?>">
-			<?php _e('Order:'); ?>
+			<?php _e('Order:', 'PFC'); ?>
 			</label>
 			<select style="width: 100%;" id="<?php echo $this->get_field_id('post_order'); ?>" name="<?php echo $this->get_field_name('post_order'); ?>">
-				<option value="0"><?php _e( '&mdash; Select &mdash;' ) ?></option>
+				<option value="0"><?php _e( '&mdash; Select &mdash;', 'PFC' ) ?></option>
 		<?php
 			$p_orders = array( 
 							'ASC' => 'Ascending',
@@ -237,14 +237,14 @@ class PFCWidget extends WP_Widget {
 
 		<p style="text-align:left;">
 		<label for="<?php echo $this->get_field_name('post_num'); ?>">
-		<?php _e('Number of Post:'); ?></label>
+		<?php _e('Number of Post:', 'PFC'); ?></label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('post_num'); ?>" name="<?php echo $this->get_field_name('post_num'); ?>" type="number" value="<?php echo $post_num; ?>" />
 		
 		</p>
 
 		<p style="text-align:left;">
 		<label for="<?php echo $this->get_field_name('post_exclude'); ?>">
-		<?php _e('Exclude Posts:'); ?></label>
+		<?php _e('Exclude Posts:', 'PFC'); ?></label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('post_exclude'); ?>" name="<?php echo $this->get_field_name('post_exclude'); ?>" type="text" value="<?php echo $post_exclude; ?>" />
 		<small>Enter post id separated with comma to exclude multiple posts.</small>
 		
@@ -252,14 +252,14 @@ class PFCWidget extends WP_Widget {
 
 		<p style="text-align:left;">
 		<label for="<?php echo $this->get_field_name('post_length'); ?>">
-		<?php _e('Words of Excerpt:'); ?></label>
+		<?php _e('Words of Excerpt:', 'PFC'); ?></label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('post_length'); ?>" name="<?php echo $this->get_field_name('post_length'); ?>" type="number" value="<?php echo $post_length; ?>" />
 		
 		</p>
 
 		<p>		  
 		 	<input class="checkbox" type="checkbox" <?php echo checked( $thumbnail ); ?> id="<?php echo $this->get_field_id('thumbnail'); ?>" name="<?php echo $this->get_field_name('thumbnail'); ?>" /> 
-		 	<label for="<?php echo $this->get_field_id('thumbnail'); ?>"><?php _e('Display/Select Thumbnail'); ?></label>		    
+		 	<label for="<?php echo $this->get_field_id('thumbnail'); ?>"><?php _e('Display/Select Thumbnail', 'PFC'); ?></label>		    
 		    <select style="width: 100%; margin-top:10px;" id="<?php echo $this->get_field_id('post_thumbs'); ?>" name="<?php echo $this->get_field_name('post_thumbs'); ?>">	    		
 		    <?php
 		    	$thumbs = array( 
@@ -280,12 +280,12 @@ class PFCWidget extends WP_Widget {
 		<p>
 		<input class="checkbox" type="checkbox" <?php checked( $date ); ?> id="<?php echo $this->get_field_id( 'date' ); ?>" name="<?php echo $this->get_field_name( 'date' ); ?>" />
 		<label for="<?php echo $this->get_field_id( 'date' ); ?>">
-		<?php _e( 'Display Post Date' ); ?></label>
+		<?php _e( 'Display Post Date', 'PFC' ); ?></label>
 		</p>
 
 		<p>
 			<input class="checkbox" type="checkbox" <?php echo checked( $read_more ); ?> id="<?php echo $this->get_field_id('read_more'); ?>" name="<?php echo $this->get_field_name('read_more'); ?>" /> 
-			<label for="<?php echo $this->get_field_id('read_more'); ?>"><?php _e('Display Read More'); ?></label>			
+			<label for="<?php echo $this->get_field_id('read_more'); ?>"><?php _e('Display Read More', 'PFC' ); ?></label>			
 		</p>		
 
 		
