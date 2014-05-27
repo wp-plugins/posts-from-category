@@ -14,7 +14,7 @@ Plugin to list posts from specific category.
 
 == Description ==
 
-Plugin to list posts from specific category. You can customize your listing as your requirement. 
+Plugin to list posts from specific category. You can customize your listing as per your requirement. 
 
 Following features are offered by plugin:
 
@@ -24,7 +24,7 @@ Following features are offered by plugin:
 * Order posts in Ascending or Descending order
 * Select number of posts to display
 * Exclude posts from listing
-* Change word lenght of excerpt
+* Change word length of excerpt
 * Enable/Disable featured image
 * Select size of featured image
 * Enable/Disable publish date
