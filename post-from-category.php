@@ -26,10 +26,10 @@ class PFCWidget extends WP_Widget {
 
 		$widget_ops = array(						
 						'classname' => 'pfc-widget', 
-						'description' => __( "Display posts from selected category") 
+						'description' => __( 'Display posts from selected category', 'PFC') 
 						);
 		
-		$this->WP_Widget('PFCWidget', __('Posts From Category'), $widget_ops, $control_ops);
+		$this->WP_Widget('PFCWidget', __('Posts From Category', 'PFC'), $widget_ops, $control_ops);
 	}
 	
 	/**
@@ -246,7 +246,7 @@ class PFCWidget extends WP_Widget {
 		<label for="<?php echo $this->get_field_name('post_exclude'); ?>">
 		<?php _e('Exclude Posts:', 'PFC'); ?></label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('post_exclude'); ?>" name="<?php echo $this->get_field_name('post_exclude'); ?>" type="text" value="<?php echo $post_exclude; ?>" />
-		<small>Enter post id separated with comma to exclude multiple posts.</small>
+		<small><?php _e('Enter post id separated with comma to exclude multiple posts.', 'PFC'); ?></small>
 		
 		</p>
 
