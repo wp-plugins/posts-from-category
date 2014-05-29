@@ -30,6 +30,9 @@ Following features are offered by plugin:
 * Enable/Disable publish date
 * Enable/Disable read more link
 
+= Translation =        
+This plugin can be translated in your language. If you wish to translate it in your language, please send [me](mailto:smanesh2004@gmail.com) your translation files. 
+
 == Installation ==
 
 1. Download the plugin from plugin directory

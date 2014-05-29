@@ -24,6 +24,8 @@ class PFCWidget extends WP_Widget {
 	function PFCWidget(){
 		global $control_ops, $post_cat, $post_num, $post_length;
 
+		load_plugin_textdomain( 'PFC', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
 		$widget_ops = array(						
 						'classname' => 'pfc-widget', 
 						'description' => __( 'Display posts from selected category', 'PFC') 
@@ -114,7 +116,7 @@ class PFCWidget extends WP_Widget {
 
 					<?php
 					if( 1 == $read_more ){ ?>
-						<a href="<?php the_permalink(); ?>" title="<?php _e('Go to', 'PFC').' '.get_the_title(); ?>" class="read-more">Read More</a>
+						<a href="<?php the_permalink(); ?>" title="<?php _e('Go to', 'PFC').' '.get_the_title(); ?>" class="read-more"><?php _e('Read More', 'PFC'); ?></a>
 					<?php } ?>
 
 					</div>
@@ -138,7 +140,20 @@ class PFCWidget extends WP_Widget {
 	*/
 	function form($instance){	
 		
-		$instance = wp_parse_args( (array) $instance, array('title'=>'', 'facebook_page_url'=>'', 'twitter_id'=>'', 'gplus_id'=>'') );
+		$instance = wp_parse_args( (array) $instance, array(
+						'title'			=> '', 
+						'post_cat'		=> '', 
+						'post_order_by'	=> '', 
+						'post_order'	=> '',
+						'post_num'		=> '', 
+						'post_length'	=> '', 
+						'post_exclude'	=> '', 
+						'date'			=> '', 
+						'read_more'		=> '', 
+						'thumbnail'		=> '', 
+						'post_thumbs'	=> '', 
+						) 
+					);
 		
 		
 		$title 			=  isset( $instance['title'] ) ? $instance['title'] : '';	
@@ -168,17 +183,16 @@ class PFCWidget extends WP_Widget {
 		# Output the options?>
 		<p style="text-align:left;">
 		<label for="<?php echo $this->get_field_name('title'); ?>">
-		<?php _e('Title:', 'PFC'); ?></label>
+		<?php _e('Title', 'PFC'); ?>:</label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 		
 		</p>
 		
 		<p style="text-align:left;">
 			<label for="<?php echo $this->get_field_id('post_cat'); ?>">
-			<?php _e('Select Category:', 'PFC'); ?>
-			</label>
+			<?php _e('Select Category', 'PFC'); ?>:</label>
 			<select style="width: 100%;" id="<?php echo $this->get_field_id('post_cat'); ?>" name="<?php echo $this->get_field_name('post_cat'); ?>">
-				<option value="0"><?php _e( '&mdash; Select &mdash;', 'PFC' ) ?></option>
+				<option value="0">&mdash;<?php _e( 'Select', 'PFC' ); ?>&mdash;</option>
 		<?php
 			$cats = get_categories( array( 'hide_empty' => 0 ) );
 			foreach ( $cats as $cat ) {
@@ -192,19 +206,19 @@ class PFCWidget extends WP_Widget {
 
 		<p style="text-align:left;">
 			<label for="<?php echo $this->get_field_id('post_order_by'); ?>">
-			<?php _e('Order By:', 'PFC'); ?>
+			<?php _e('Order By', 'PFC'); ?>:
 			</label>
 			<select style="width: 100%;" id="<?php echo $this->get_field_id('post_order_by'); ?>" name="<?php echo $this->get_field_name('post_order_by'); ?>">
-				<option value="0"><?php _e( '&mdash; Select &mdash;', 'PFC' ) ?></option>
+				<option value="0">&mdash;<?php _e( 'Select', 'PFC' ); ?>&mdash;</option>
 		<?php
 			$orders = array( 
-							'author' => 'Author',
-							'title' => 'Post Title',
-							'ID' => 'Post ID',
-							'date' => 'Date',							
-							'menu_order' => 'Menu Order',						
-							'comment_count' => 'Number of Comments',
-							'rand' => 'Random'
+							'author' 		=> __('Author', 'PFC'),
+							'title' 		=> __('Post Title', 'PFC'),
+							'ID' 			=> __('Post ID', 'PFC'),
+							'date' 			=> __('Date', 'PFC'),							
+							'menu_order' 	=> __('Menu Order', 'PFC'),						
+							'comment_count' => __('Number of Comments', 'PFC'),
+							'rand' 			=> __('Random', 'PFC')
 						);
 			foreach ( $orders as $key => $value ) {
 				echo '<option value="' . $key . '"'
@@ -217,14 +231,14 @@ class PFCWidget extends WP_Widget {
 
 		<p style="text-align:left;">
 			<label for="<?php echo $this->get_field_id('post_order'); ?>">
-			<?php _e('Order:', 'PFC'); ?>
+			<?php _e('Order', 'PFC'); ?>:
 			</label>
 			<select style="width: 100%;" id="<?php echo $this->get_field_id('post_order'); ?>" name="<?php echo $this->get_field_name('post_order'); ?>">
-				<option value="0"><?php _e( '&mdash; Select &mdash;', 'PFC' ) ?></option>
+				<option value="0">&mdash;<?php _e( 'Select', 'PFC' ); ?>&mdash;</option>
 		<?php
 			$p_orders = array( 
-							'ASC' => 'Ascending',
-							'DESC' => 'Descending',
+							'ASC' 	=> __('Ascending', 'PFC'),
+							'DESC' 	=> __('Descending', 'PFC')
 						);
 			foreach ( $p_orders as $key => $value ) {
 				echo '<option value="' . $key . '"'
@@ -237,22 +251,22 @@ class PFCWidget extends WP_Widget {
 
 		<p style="text-align:left;">
 		<label for="<?php echo $this->get_field_name('post_num'); ?>">
-		<?php _e('Number of Post:', 'PFC'); ?></label>
+		<?php _e('Number of Post', 'PFC'); ?>:</label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('post_num'); ?>" name="<?php echo $this->get_field_name('post_num'); ?>" type="number" value="<?php echo $post_num; ?>" />
 		
 		</p>
 
 		<p style="text-align:left;">
 		<label for="<?php echo $this->get_field_name('post_exclude'); ?>">
-		<?php _e('Exclude Posts:', 'PFC'); ?></label>
+		<?php _e('Exclude Posts', 'PFC'); ?>:</label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('post_exclude'); ?>" name="<?php echo $this->get_field_name('post_exclude'); ?>" type="text" value="<?php echo $post_exclude; ?>" />
-		<small><?php _e('Enter post id separated with comma to exclude multiple posts.', 'PFC'); ?></small>
+		<small><?php _e('Enter post id separated with comma to exclude multiple posts', 'PFC'); ?>.</small>
 		
 		</p>
 
 		<p style="text-align:left;">
 		<label for="<?php echo $this->get_field_name('post_length'); ?>">
-		<?php _e('Words of Excerpt:', 'PFC'); ?></label>
+		<?php _e('Words of Excerpt', 'PFC'); ?>:</label>
 		<input style="width: 100%;" id="<?php echo $this->get_field_id('post_length'); ?>" name="<?php echo $this->get_field_name('post_length'); ?>" type="number" value="<?php echo $post_length; ?>" />
 		
 		</p>
@@ -263,10 +277,10 @@ class PFCWidget extends WP_Widget {
 		    <select style="width: 100%; margin-top:10px;" id="<?php echo $this->get_field_id('post_thumbs'); ?>" name="<?php echo $this->get_field_name('post_thumbs'); ?>">	    		
 		    <?php
 		    	$thumbs = array( 
-		    					'thumbnail' => 'Thumbnail',
-		    					'medium' => 'Medium',
-		    					'large' => 'Large',
-		    					'full' => 'Full',
+		    					'thumbnail' => __('Thumbnail', 'PFC'),
+		    					'medium' 	=> __('Medium', 'PFC'),
+		    					'large' 	=> __('Large', 'PFC'),
+		    					'full' 		=> __('Full', 'PFC')
 		    				);
 		    	foreach ( $thumbs as $key => $value ) {
 		    		echo '<option value="' . $key . '"'
