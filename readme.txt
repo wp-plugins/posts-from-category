@@ -2,7 +2,7 @@
 Contributors: maneshtimilsina 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NRXQAT8FRRG3S
 Tags: posts from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list posts from specific category, post, sidebar
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 3.4.0
 Tested up to: 3.9.1
 Stable tag: 1.0.0
@@ -64,6 +64,10 @@ This plugin do not have separate setting page. You can provide necessary details
 2. Frontend View
 
 == Changelog ==
+
+= 1.0.1 =
+Excerpt length bug fixed.
+Dynamic thumbnail sizes added.
 
 = 1.0.0 =
 First publicly distributable version

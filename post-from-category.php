@@ -1,8 +1,8 @@
 <?php
 /*
  * Plugin Name: Posts From Category
- * Version: 1.0.0
- * Plugin URI: #
+ * Version: 1.0.1
+ * Plugin URI: http://wordpress.org/plugins/posts-from-category/
  * Description: Plugin to display posts from specific category. 
  * Author: Manesh Timilsina
  * Author URI: http://manesh.com.np/
@@ -40,7 +40,7 @@ class PFCWidget extends WP_Widget {
 	*/
 	function widget($args, $instance){
 
-		extract($args);
+		extract($args);		
 
 		$title 			= apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title']);
 
@@ -52,7 +52,7 @@ class PFCWidget extends WP_Widget {
 
 		$post_num 		= ! empty( $instance['post_cat'] ) ? $instance['post_num'] : 5;
 
-		$post_length 	= ! empty( $instance['post_length'] ) ? $instance['post_length'] : 10;
+		$post_length 	= $instance['post_length'];
 
 		$post_exclude 	= ! empty( $instance['post_exclude'] ) ? $instance['post_exclude'] : '';
 
@@ -111,8 +111,12 @@ class PFCWidget extends WP_Widget {
 
 					}
 					?>
+
+					<?php if( 0 != $post_length){ ?>
 					
 					<p><?php echo custom_limit_words(sanitize_text_field(get_the_content()), $post_length); ?></p>
+
+					<?php } ?>
 
 					<?php
 					if( 1 == $read_more ){ ?>
