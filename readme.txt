@@ -66,8 +66,8 @@ This plugin do not have separate setting page. You can provide necessary details
 == Changelog ==
 
 = 1.0.2 =
-- Title and Date bug fixed.
-- Author details changed.
+- Author details changed. 
+- Donation link changed.
 
 = 1.0.1 =
 - Excerpt length bug fixed.
