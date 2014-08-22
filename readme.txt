@@ -1,11 +1,11 @@
 === Posts From Category ===
 Contributors: maneshtimilsina 
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NRXQAT8FRRG3S
-Tags: posts from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list posts from specific category, post, sidebar
-Version: 1.0.1
+Donate link: http://manesh.com.np/contact-me/
+Tags: posts from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list posts from specific category, post, sidebar, post from category, list category post, category posts
+Version: 1.0.2
 Requires at least: 3.4.0
 Tested up to: 3.9.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,14 +65,18 @@ This plugin do not have separate setting page. You can provide necessary details
 
 == Changelog ==
 
+= 1.0.2 =
+- Title and Date bug fixed.
+- Author details changed.
+
 = 1.0.1 =
-Excerpt length bug fixed.
-Dynamic thumbnail sizes added.
+- Excerpt length bug fixed.
+- Dynamic thumbnail sizes added.
 
 = 1.0.0 =
-First publicly distributable version
+- First publicly distributable version
 
 == Upgrade Notice ==
 
 = 1.0.0 =
-First publicly distributable version
+- First publicly distributable version
