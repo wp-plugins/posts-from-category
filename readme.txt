@@ -1,11 +1,11 @@
 === Posts From Category ===
-Contributors: maneshtimilsina 
+Contributors: maneshtimilsina, sofi-soao (German translation)
 Donate link: http://manesh.com.np/contact-me/
 Tags: posts from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list posts from specific category, post, sidebar, post from category, list category post, category posts
-Version: 1.0.2
+Version: 2.0.1
 Requires at least: 3.4.0
-Tested up to: 3.9.1
-Stable tag: 1.0.2
+Tested up to: 4.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,13 @@ Following features are offered by plugin:
 
 = Translation =        
 This plugin can be translated in your language. If you wish to translate it in your language, please send [me](mailto:smanesh2004@gmail.com) your translation files. 
+
+= German Language =
+This plugin is available in German Lannguage. 
+
+= Contribution =
+Thanks Sofi Soao for German language translation of this plugin.
+
 
 == Installation ==
 
@@ -64,6 +71,10 @@ This plugin do not have separate setting page. You can provide necessary details
 2. Frontend View
 
 == Changelog ==
+
+= 2.0.1 =
+- Plugin translated in German language. 
+- Solved the issue with the number of posts control.
 
 = 1.0.2 =
 - Author details changed. 
