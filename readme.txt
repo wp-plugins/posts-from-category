@@ -32,7 +32,7 @@ Following features are offered by plugin:
 
 = Available Languages =
 - English
-- German 
+- German [(Sofi Soao)](http://wordpress.org/support/profile/sofi-soao)
 
 = Translation =        
 This plugin can be translated in your language. If you wish to translate it in your language, please send [me](mailto:smanesh2004@gmail.com) your translation files. 
