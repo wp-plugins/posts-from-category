@@ -1,5 +1,5 @@
 === Posts From Category ===
-Contributors: maneshtimilsina, sofi-soao (German translation)
+Contributors: maneshtimilsina
 Donate link: http://manesh.com.np/contact-me/
 Tags: posts from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list posts from specific category, post, sidebar, post from category, list category post, category posts
 Version: 2.0.1
@@ -30,14 +30,15 @@ Following features are offered by plugin:
 * Enable/Disable publish date
 * Enable/Disable read more link
 
+= Available Languages =
+- English
+- German 
+
 = Translation =        
 This plugin can be translated in your language. If you wish to translate it in your language, please send [me](mailto:smanesh2004@gmail.com) your translation files. 
 
-= German Language =
-This plugin is available in German Lannguage. 
-
 = Contribution =
-Thanks Sofi Soao for German language translation of this plugin.
+Thanks [Sofi Soao](http://wordpress.org/support/profile/sofi-soao) for German language translation of this plugin.
 
 
 == Installation ==
