@@ -50,7 +50,7 @@ class PFCWidget extends WP_Widget {
 
 		$post_order		= ! empty( $instance['post_order'] ) ? $instance['post_order'] : false;
 
-		$post_num 		= ! empty( $instance['post_cat'] ) ? $instance['post_num'] : 5;
+		$post_num 		= ! empty( $instance['post_num'] ) ? $instance['post_num'] : 5;
 
 		$post_length 	= $instance['post_length'];
 
