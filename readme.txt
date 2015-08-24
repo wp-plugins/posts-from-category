@@ -2,14 +2,14 @@
 Contributors: maneshtimilsina
 Donate link: http://manesh.com.np/contact-me/
 Tags: posts from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list posts from specific category, post, sidebar, post from category, list category post, category posts
-Version: 2.0.1
+Version: 3.0.1
 Requires at least: 3.4.0
-Tested up to: 4.0.0
-Stable tag: 2.0.1
+Tested up to: 4.3
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Plugin to list posts from specific category.
+Plugin to display posts from specific category with option to filter them.
 
 
 == Description ==
@@ -72,6 +72,10 @@ This plugin do not have separate setting page. You can provide necessary details
 2. Frontend View
 
 == Changelog ==
+
+= 3.0.1 =
+- Widget updated. 
+- Tested upto WordPress 4.3
 
 = 2.0.1 =
 - Plugin translated in German language. 

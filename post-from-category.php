@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Posts From Category
- * Version: 2.0.1
+ * Version: 3.0.1
  * Plugin URI: http://wordpress.org/plugins/posts-from-category/
  * Description: Plugin to display posts from specific category. 
  * Author: Manesh Timilsina
@@ -18,10 +18,10 @@ class PFCWidget extends WP_Widget {
 	/**
 	* Declares the PFCWidget class.
 	*
-	*/
-	
+	*/	
 
-	function PFCWidget(){
+	public function __construct() {
+
 		global $control_ops, $post_cat, $post_num, $post_length;
 
 		load_plugin_textdomain( 'PFC', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -29,9 +29,9 @@ class PFCWidget extends WP_Widget {
 		$widget_ops = array(						
 						'classname' => 'pfc-widget', 
 						'description' => __( 'Display posts from selected category', 'PFC') 
-						);
-		
-		$this->WP_Widget('PFCWidget', __('Posts From Category', 'PFC'), $widget_ops, $control_ops);
+					);
+		parent::__construct('PFCWidget', __('Posts From Category', 'PFC'), $widget_ops, $control_ops);
+		$this->alt_option_name = 'widget_pfc';		
 	}
 	
 	/**
