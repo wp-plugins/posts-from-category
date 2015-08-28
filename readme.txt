@@ -2,10 +2,10 @@
 Contributors: maneshtimilsina
 Donate link: http://manesh.com.np/contact-me/
 Tags: posts from category, post listing, post list from category, widget, plugin, post listing widget, plugin to list posts, list posts from specific category, post, sidebar, post from category, list category post, category posts
-Version: 3.0.1
+Version: 3.1.1
 Requires at least: 3.4.0
 Tested up to: 4.3
-Stable tag: 3.0.1
+Stable tag: 3.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,12 +33,14 @@ Following features are offered by plugin:
 = Available Languages =
 - English
 - German [(Sofi Soao)](http://wordpress.org/support/profile/sofi-soao)
+- Romanian [(Adrian C.)]
 
 = Translation =        
 This plugin can be translated in your language. If you wish to translate it in your language, please send [me](mailto:smanesh2004@gmail.com) your translation files. 
 
 = Contribution =
-Thanks [Sofi Soao](http://wordpress.org/support/profile/sofi-soao) for German language translation of this plugin.
+- Thanks [Sofi Soao](http://wordpress.org/support/profile/sofi-soao) for German language translation of this plugin.
+- Thanks [(Adrian C.)] for Romanian language translation of this plugin.
 
 
 == Installation ==
@@ -72,6 +74,10 @@ This plugin do not have separate setting page. You can provide necessary details
 2. Frontend View
 
 == Changelog ==
+
+= 3.1.1 =
+- Romanian language added
+
 
 = 3.0.1 =
 - Widget updated. 

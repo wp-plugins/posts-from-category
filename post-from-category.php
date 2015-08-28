@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Posts From Category
- * Version: 3.0.1
+ * Version: 3.1.1
  * Plugin URI: http://wordpress.org/plugins/posts-from-category/
  * Description: Plugin to display posts from specific category. 
  * Author: Manesh Timilsina
